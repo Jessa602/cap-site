@@ -1,4 +1,4 @@
-import { selectedProduct, setSelectedProduct } from "./helper";
+import AllProducts from "./AllProducts";
 
 export default function ProductDetails({ selectedProduct }) {
   return (

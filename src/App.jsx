@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import "./index.css";
+import "/home/jessa06/coursework/cap-site/src/App.css";
+// import { NavBar } from "./components/NavBar";
+import { Route } from "react-router-dom";
+// import { AuthProvider } from "./components/Auth";
+import { Routes } from "react-router-dom";
+// import { Profile } from "./components/Profile";
+// import { Login } from "./components/Login";
+import AllProducts from "./components/AllProducts";
+import SingleProduct from "./components/SingleProduct";
+import Search from "./Search";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
+    // <AuthProvider>
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      {/* <NavBar /> */}
+      <Search />
+      <AllProducts />
 
-export default App
+      {/* // <Routes>
+      //   <Route path="/" element={<Home />} />
+      //   <Route path="/about" element={<About />} />
+      //   <Route path="/contact" element={<Contact />} />
+      //   <Route path="/login" element={<Login />} />
+      //   <Route path="/register" element={<Register />} />
+      //   <Route path="/profile" element={<Profile />} />
+      //   <Route path="*" element={<NotFound />} />
+      // </Routes> */}
+      {/* </AuthProvider> */}
+      {/* © <a href='https://www.123rf.com/profile_virtosmedia'>virtosmedia</a>, <a href='https://www.123rf.com/free-images/'>123RF Free Images</a> */}
+    </>
+  );
+}
